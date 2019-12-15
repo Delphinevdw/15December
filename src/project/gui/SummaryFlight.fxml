@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="582.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.gui.SummaryFlightController">
+   <children>
+      <Button fx:id="generateOverviewbtn" layoutX="15.0" layoutY="93.0" mnemonicParsing="false" text="Generate Overview " />
+      <TableView fx:id="overviewTable" layoutX="11.0" layoutY="160.0" prefHeight="303.0" prefWidth="602.0">
+        <columns>
+          <TableColumn fx:id="fromColumn" prefWidth="93.3333101272583" text="From" />
+          <TableColumn fx:id="toColumn" prefWidth="171.33329010009766" text="To" />
+            <TableColumn fx:id="depDateTimeColumn" prefWidth="153.3333740234375" text="Dep datetime" />
+            <TableColumn fx:id="arrDateTimeColumn" prefWidth="183.33328247070312" text="Arr datetime" />
+        </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="29.0" text="Overview of ticket " />
+      <TextField fx:id="txtTicketNumber" layoutX="133.0" layoutY="25.0" />
+      <Label layoutX="26.0" layoutY="514.0" text="Total price of your trip" />
+      <ListView fx:id="totalPriceListView" layoutX="160.0" layoutY="510.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>

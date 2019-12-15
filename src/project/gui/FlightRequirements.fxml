@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="flightPane" prefHeight="582.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.gui.FlightRequirementsController">
+   <children>
+      <Label layoutX="235.0" layoutY="29.0" text="TO">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <DatePicker fx:id="departure" layoutX="72.0" layoutY="70.0" prefHeight="25.0" prefWidth="121.0" promptText="Leaving" />
+      <TextField fx:id="txtFrom" layoutX="72.0" layoutY="25.0" prefHeight="25.0" prefWidth="121.0" promptText="Airportcode" />
+      <Label layoutX="29.0" layoutY="29.0" text="FROM">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtTo" layoutX="262.0" layoutY="25.0" prefHeight="25.0" prefWidth="121.0" promptText="Airportcode" />
+      <Button fx:id="searchBookingbtn" layoutX="356.0" layoutY="133.0" mnemonicParsing="false" onAction="#SearchBooking" onMouseClicked="#OptionSingleFlightHandler" text="Search " />
+      <Label layoutX="208.0" layoutY="74.0" text="UNTIL">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="leavingdate" layoutX="262.0" layoutY="70.0" prefHeight="25.0" prefWidth="121.0" promptText="Return" />
+      <Label layoutX="25.0" layoutY="110.0" text="MAIN CONCERN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="72.0" layoutY="137.0" mnemonicParsing="false" text="CO2" />
+      <CheckBox layoutX="133.0" layoutY="137.0" mnemonicParsing="false" text="Duration" />
+      <CheckBox layoutX="211.0" layoutY="137.0" mnemonicParsing="false" text="Price" />
+      <CheckBox layoutX="266.0" layoutY="137.0" mnemonicParsing="false" text="#Transfers" />
+      <TableView fx:id="flightView" layoutX="3.0" layoutY="184.0" prefHeight="177.0" prefWidth="613.0">
+         <columns>
+            <TableColumn fx:id="pathColumn" prefWidth="142.0" text="Path" />
+            <TableColumn fx:id="depDateTimeCulomn" prefWidth="105.0" text="Dep " />
+            <TableColumn fx:id="arrDateTimeColumn" prefWidth="118.0" text="Arr" />
+            <TableColumn fx:id="transfersColumn" prefWidth="36.0" text="Trans" />
+            <TableColumn fx:id="CO2Column" prefWidth="58.0" text="CO2" />
+            <TableColumn fx:id="priceColumn" prefWidth="65.0" text="Price" />
+            <TableColumn fx:id="durationColumn" prefWidth="88.0" text="Dur" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="380.0" text="RETURN (IF RETURN DATE GIVEN)">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="returnFlightView" layoutX="3.0" layoutY="397.0" prefHeight="177.0" prefWidth="613.0">
+         <columns>
+            <TableColumn fx:id="returnPathColumn" prefWidth="142.0" text="Path" />
+            <TableColumn fx:id="returnDepDateTimeColumn" prefWidth="105.0" text="Dep " />
+            <TableColumn fx:id="returnArrDateTimeColumn" prefWidth="118.0" text="Arr" />
+            <TableColumn fx:id="returnTransfersColumn" prefWidth="36.0" text="Trans" />
+            <TableColumn fx:id="returnCO2Column" prefWidth="58.0" text="CO2" />
+            <TableColumn fx:id="returnPriceColumn" prefWidth="65.0" text="Price" />
+            <TableColumn fx:id="returnDurationColumn" prefWidth="88.0" text="Dur" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
